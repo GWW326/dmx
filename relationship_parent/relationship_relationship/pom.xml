@@ -24,10 +24,10 @@
   </dependencies>
     <build>
         <plugins>
-            <--! <plugin>
+            <!-- <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
+                <configuration> 
                     <!-- 指定该Main Class为全局的唯一入口 -->
                     <mainClass>com.govin.relationship.Application</mainClass>
                     <layout>ZIP</layout>
@@ -39,7 +39,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>  -->
 	  <plugin>
 		<groupId>com.spotify</groupId>
 		<artifactId>docker-maven-plugin</artifactId>
