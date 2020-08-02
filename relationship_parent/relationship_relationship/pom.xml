@@ -24,7 +24,7 @@
   </dependencies>
     <build>
         <plugins>
-            <plugin>
+            <--! <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
@@ -39,31 +39,29 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-		<plugin>
-	<groupId>com.spotify</groupId>
-<artifactId>docker-maven-plugin</artifactId>
-<version>0.4.13</version>
-<configuration>
-<imageName>192.168.12.131:5000/${project.artifactId}:${project.version}
-</imageName>
-<baseImage>jdk1.8</baseImage>
-<entryPoint>["java", "-jar",
-"/${project.build.finalName}.jar"]</entryPoint>
-<resources>
-<resource>
-<targetPath>/</targetPath>
-<directory>${project.build.directory}
-</directory>
-<include>${project.build.finalName}.jar</include>
-</resource>
-</resources>
-<dockerHost>http://192.168.12.131:2375</dockerHost>
-</configuration>
-</plugin>
+            </plugin> -->
+	  <plugin>
+		<groupId>com.spotify</groupId>
+		<artifactId>docker-maven-plugin</artifactId>
+		<version>0.4.13</version>
+		<configuration>
+			<imageName>192.168.12.131:5000/${project.artifactId}:${project.version}
+			</imageName>
+			<baseImage>jdk1.8</baseImage>
+			<entryPoint>["java", "-jar",
+			"/${project.build.finalName}.jar"]</entryPoint>
+			<resources>
+				<resource>
+				<targetPath>/</targetPath>
+				<directory>${project.build.directory}
+				</directory>
+				<include>${project.build.finalName}.jar</include>
+				</resource>
+			</resources>
+			<dockerHost>http://192.168.12.131:2375</dockerHost>
+		</configuration>
+		</plugin>
         </plugins>
-	    <pluginGroups>  
-    <pluginGroup>com.spotify</pluginGroup>  
-</pluginGroups>
+	    
     </build>
 </project>
