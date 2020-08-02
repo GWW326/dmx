@@ -25,9 +25,7 @@
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
   </dependencies>
-	 <pluginGroups>  
-    		<pluginGroup>com.spotify</pluginGroup>  
-	</pluginGroups>
+	
     <build>
        
         <plugins>
