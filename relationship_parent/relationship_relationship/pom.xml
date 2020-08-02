@@ -62,5 +62,8 @@
 </configuration>
 </plugin>
         </plugins>
+	    <pluginGroups>  
+    <pluginGroup>com.spotify</pluginGroup>  
+</pluginGroups>
     </build>
 </project>
