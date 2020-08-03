@@ -50,7 +50,7 @@
 		<artifactId>docker-maven-plugin</artifactId>
 		
 		<configuration>
-			<imageName>192.168.12.131:5000/${project.artifactId}:${project.version}
+			<imageName>${project.artifactId}:${project.version}
 			</imageName>
 			<baseImage>jdk1.8</baseImage>
 			<entryPoint>["java", "-jar",
